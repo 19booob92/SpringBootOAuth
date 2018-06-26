@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.TestModel;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/secured/")
 public class MainController {
 
-	@GetMapping("test")
+	@GetMapping("/test")
 	public String test() {
 		return "Success!";
 	}
 	
-	@PostMapping("test")
+	@PostMapping("/test")
 	public TestModel printModel(@RequestBody TestModel model) {
 		return model;
 	}
